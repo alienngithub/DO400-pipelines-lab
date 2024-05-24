@@ -10,9 +10,9 @@ pipeline {
                     when {
                         expression { return params.RUN_INTEGRATION_TESTS}
                     }
-                    steps [
+                    steps {
                         sh 'mvn test -D testGroups=integration'
-                    ]
+                    }
                 }
                 stage('Unit Tests') {
                     steps {
